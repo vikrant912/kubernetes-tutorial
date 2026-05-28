@@ -1,0 +1,10 @@
+kublet process is running on each node 
+master and worker nodes
+Master Node:- 
+i) API Server :- Entrypoint to K8S cluster
+ii) Controller manager :-  Keeps track of whats happening in the cluster 
+iii) Scheduler :- Ensure pods placement
+iv)etcd:- Kubernetes backing store 
+
+
+
