@@ -4,7 +4,7 @@ Master Node:-
 i) API Server :- Entrypoint to K8S cluster
 ii) Controller manager :-  Keeps track of whats happening in the cluster 
 iii) Scheduler :- Ensure pods placement
-iv)etcd:- Kubernetes backing store 
+iv)etcd:- Kubernetes backing store (Cluster brain) key value store
 ----------------------------------------------
 
 Pods and containers
@@ -22,7 +22,7 @@ Virtual Network :- Each pod gets own ip address
 
 Service :- Permanent IP address with dns , load balancer
 
-Ingress:- routes traffics into cluster 
+Ingress:- routes traffics into cluster , Load balancer 
 
 Configmap :- External configuration of application 
 Secret :- Used to store cred dtat base64 encoded
