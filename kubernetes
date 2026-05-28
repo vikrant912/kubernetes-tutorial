@@ -5,6 +5,12 @@ i) API Server :- Entrypoint to K8S cluster
 ii) Controller manager :-  Keeps track of whats happening in the cluster 
 iii) Scheduler :- Ensure pods placement
 iv)etcd:- Kubernetes backing store 
+----------------------------------------------
 
+Pods and containers
+
+A pod is the Kubernetes wrapper used to manage one or more of those containers
+pod is smallest unit as user to manage
+usually one pod per application
 
 
