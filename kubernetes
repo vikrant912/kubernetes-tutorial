@@ -13,4 +13,26 @@ A pod is the Kubernetes wrapper used to manage one or more of those containers
 pod is smallest unit as user to manage
 usually one pod per application
 
+------------------------------------------
+API server get requests in yaml and json format
+Declarative 
+Is==should state 
+Controller manager checkes :- Desired and actual state 
+Virtual Network :- Each pod gets own ip address
+
+Service :- Permanent IP address with dns , load balancer
+
+Ingress:- routes traffics into cluster 
+
+Configmap :- External configuration of application 
+Secret :- Used to store cred dtat base64 encoded
+-----------------------------------------------------
+Deployment for sateless Apps
+
+Statefulset for stateful apps or databases
+----------------------------------------------------------
+
+Kublet interact with both the containers and node
+
+------------------------------------------------------------------
 
