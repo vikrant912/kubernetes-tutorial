@@ -49,10 +49,132 @@ kubectl get nodes = shows running nodes status
 kubectl get pod =shows running pod status 
 kubectl create deployment NAME --image=image      #Blueprint for creating pods # most basic configuration for deployment
 kubectl get replicaset = managing replicas of pod 
+kubectl logs podname = To check logs 
+kubectl describe pod podname = check state of pods 
+kubectl exec -it podname --/bin/bash = to enter into pod 
+kubectl delete deployment podname   = to delete pod 
+kubectl apply -f filename.yaml 
+-----------------------------------------------------
+1️⃣ apiVersion
+Example:
+apiVersion: apps/v1
 
-<<<<<<< HEAD
+Meaning:
+
+Tells Kubernetes which API version to use.
+apps/v1 is required for Deployments in modern Kubernetes.
 
 
- 
-=======
->>>>>>> fbc3514478ecd21d7a3cde2eb290248b9f802627
+2️⃣ kind
+Example:
+kind: Deployment
+
+Meaning:
+
+Defines the type of object.
+Deployment = manages Pods for you.
+
+
+3️⃣ metadata
+Example:
+metadata:
+  name: nginx-deployment
+  labels:
+    app: web
+
+Meaning:
+
+Basic object info.
+name: name of the Deployment.
+labels: optional tags used for selection, grouping, etc.
+
+
+4️⃣ spec (Deployment spec)
+Controls how the Deployment behaves.
+Example:
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    ...
+
+Breakdown:
+✔ replicas
+replicas: 2
+
+How many Pods Deployment should keep running.
+✔ selector
+selector:
+  matchLabels:
+    app: nginx
+
+Deployment identifies Pods using these labels.
+Must match template → metadata → labels.
+✔ template
+The Pod blueprint (super important).
+
+5️⃣ template (Pod blueprint)
+Example:
+template:
+  metadata:
+    labels:
+      app: nginx
+  spec:
+    containers:
+    - name: nginx
+      image: nginx:1.16
+      ports:
+      - containerPort: 8080
+
+Breakdown:
+
+A) template → metadata
+metadata:
+  labels:
+    app: nginx
+
+Meaning:
+
+Labels applied to Pods created by the Deployment
+Must match Deployment selector
+
+
+B) template → spec (Pod specification)
+This defines what runs inside each Pod.
+
+6️⃣ Pod spec → containers
+Example:
+containers:
+- name: nginx
+  image: nginx:1.16
+  ports:
+  - containerPort: 8080
+
+Breakdown:
+✔ containers
+A list because a Pod can have multiple containers.
+✔ name
+Name of the container inside the Pod.
+✔ image
+Docker image to run.
+Example:
+image: nginx:1.16
+
+✔ ports
+Ports exposed inside the container.
+Example:
+containerPort: 8080
+
+Useful for:
+
+Services
+Probes
+Networking
+
+
+
+
+
+
