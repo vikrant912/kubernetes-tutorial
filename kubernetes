@@ -45,6 +45,11 @@ kubectl:-
 
 Command line tool k8s cluster which talks with api server 
 
-kubectl get nodes = shows running nodes
+kubectl get nodes = shows running nodes status 
+kubectl get pod =shows running pod status 
+kubectl create deployment NAME --image=image      #Blueprint for creating pods # most basic configuration for deployment
+kubectl get replicaset = managing replicas of pod 
 
 
+
+ 
