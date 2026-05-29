@@ -1,4 +1,4 @@
-kublet process is running on each node 
+kubelet process is running on each node 
 master and worker nodes
 Master Node:- 
 i) API Server :- Entrypoint to K8S cluster
@@ -25,14 +25,14 @@ Service :- Permanent IP address with dns , load balancer
 Ingress:- routes traffics into cluster , Load balancer 
 
 Configmap :- External configuration of application 
-Secret :- Used to store cred dtat base64 encoded
+Secret :- Used to store credential data base64 encoded
 -----------------------------------------------------
-Deployment for sateless Apps
+Deployment for stateless Apps
 
 Statefulset for stateful apps or databases
 ----------------------------------------------------------
 
-Kublet interact with both the containers and node
+Kubelet interact with both the containers and node
 
 ------------------------------------------------------------------
 Minikube:-
@@ -43,8 +43,7 @@ dependency to install kubectl
 ------------------------
 kubectl:-
 
-Command line tool k8s cluster which talks with api server 
+Command line tool to interact with k8s cluster which talks with api server 
 
 kubectl get nodes = shows running nodes
-
 
