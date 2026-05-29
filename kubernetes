@@ -35,4 +35,16 @@ Statefulset for stateful apps or databases
 Kublet interact with both the containers and node
 
 ------------------------------------------------------------------
+Minikube:-
+
+master and worker on same machine 
+Need Virtual env for the same
+dependency to install kubectl
+------------------------
+kubectl:-
+
+Command line tool k8s cluster which talks with api server 
+
+kubectl get nodes = shows running nodes
+
 
